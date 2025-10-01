@@ -14,10 +14,10 @@ var facing: Vector2 = Vector2.ZERO
 
 
 func _ready():
-	print("Player is ready!")
+	print("Player is ready")
 	# TODO: Add detailed character info display (Lesson 1)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	handle_movement()
 
 func handle_movement():

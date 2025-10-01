@@ -8,7 +8,7 @@ extends npc
 
 func _ready() -> void:
 	super._ready()
-	player = Global.game_world.player
+
 	
 
 func _physics_process(delta: float) -> void:
