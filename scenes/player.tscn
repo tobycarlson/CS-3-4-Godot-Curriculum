@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bwd62n2s4k1j5" path="res://assets/point_light.webp" id="4_dqkch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1a2b3"]
-size = Vector2(17, 20)
+size = Vector2(17, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yt4gq"]
 atlas = ExtResource("2_wn8rh")
@@ -276,7 +276,7 @@ animations = [{
 script = ExtResource("1_4x8vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, 14)
+position = Vector2(-1.5, 8.5)
 shape = SubResource("RectangleShape2D_1a2b3")
 
 [node name="Camera2D" type="Camera2D" parent="."]

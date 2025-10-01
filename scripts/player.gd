@@ -2,23 +2,40 @@ extends CharacterBody2D
 class_name Player
 
 
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var slime: Enemy = $"../slime"
+
 
 @export var move_speed: float = 200.0
 @export var maxHealth : int = 10
 @export var health : int = maxHealth
 @export var coins : int = 0
 
-
 var facing: Vector2 = Vector2.ZERO
+
+
 
 
 func _ready():
 	print("Player is ready")
 	# TODO: Add detailed character info display (Lesson 1)
 
+
+func _process(_delta: float) -> void:
+	var slime_dist = position.distance_to(slime.position)
+	if slime_dist < 25:
+		change_health(slime.damage)
+
+
+	#if position.distance_to(slime.position) < 25:
+		#change_health(1)#slime.damage)
+
+
 func _physics_process(_delta):
 	handle_movement()
+
+
 
 func handle_movement():
 	# Get input direction from arrow keys
@@ -34,6 +51,8 @@ func handle_movement():
 	# Apply movement using Godot's built-in physics
 	velocity = direction * move_speed
 	move_and_slide()
+
+
 
 # BAD QUICK CODE MAYBE CHANGE
 func handle_sprite(direction: Vector2) -> void:
@@ -77,8 +96,10 @@ func change_health(_amount):
 		
 	print("Health: " + str(health))
 
+
 func die():
 	print("You died!")
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
