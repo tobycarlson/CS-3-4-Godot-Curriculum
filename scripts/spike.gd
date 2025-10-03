@@ -9,7 +9,7 @@ class_name Spike
 var can_damage: bool = true
 
 func _ready():
-	print("Spike created - deals " + str(damage_amount) + " damage")
+	#print("Spike created - deals " + str(damage_amount) + " damage")
 	# Connect the collision signal
 	body_entered.connect(_on_body_entered)
 

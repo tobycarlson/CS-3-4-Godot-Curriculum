@@ -12,24 +12,31 @@ class_name Player
 @export var health : int = maxHealth
 @export var coins : int = 0
 
+@export var attack_strength : int = -2
+
+
 var facing: Vector2 = Vector2.ZERO
 
 
 
-
 func _ready():
-	print("Player is ready")
+	#print("Player is ready")
+	pass
 	# TODO: Add detailed character info display (Lesson 1)
 
 
 func _process(_delta: float) -> void:
-	var slime_dist = position.distance_to(slime.position)
-	if slime_dist < 25:
-		change_health(slime.damage)
+	if slime != null:
+		var slime_dist = position.distance_to(slime.position)
+		if slime_dist < 25:
+			change_health(0) #slime.damage)
+			slime.speed = 50
 
+	if Input.is_action_just_pressed("input_Lmouse"):
+		attack()
 
-	#if position.distance_to(slime.position) < 25:
-		#change_health(1)#slime.damage)
+	if Input.is_action_just_pressed("input_r"):
+		get_tree().reload_current_scene()
 
 
 func _physics_process(_delta):
@@ -73,6 +80,8 @@ func handle_sprite(direction: Vector2) -> void:
 		animated_sprite.play(prefix + "_side")
 		animated_sprite.flip_h = false
 
+
+
 func collect_pickup(_type : String, _amount : int):
 	if _type == "coin":
 		coins += _amount
@@ -80,11 +89,6 @@ func collect_pickup(_type : String, _amount : int):
 	elif _type == "health_potion":
 		change_health(_amount)
 		
-
-# TODO: Add character methods here (Lesson 2)
-
-# - level_up()
-# - attack()
 
 func change_health(_amount): 
 	health += _amount
@@ -94,11 +98,19 @@ func change_health(_amount):
 	elif health < 1:
 		die()
 		
-	print("Health: " + str(health))
+	#print("Health: " + str(health))
+
+
+func attack() -> void:
+	if slime != null:
+		if position.distance_to(slime.position) < 55:
+			slime.attacked(attack_strength )#change_health(attack_strength)
 
 
 func die():
 	print("You died!")
+	get_tree().reload_current_scene()
+
 
 
 func _input(event: InputEvent) -> void:

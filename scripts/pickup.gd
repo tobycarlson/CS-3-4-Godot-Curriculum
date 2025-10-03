@@ -19,7 +19,7 @@ func _ready() -> void:
 		$AnimatedSprite2D.material.set_shader_parameter("color", color)
 	configure_pickup(type, label)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	pass
 

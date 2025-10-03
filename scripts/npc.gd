@@ -3,7 +3,8 @@ class_name NPC
 
 @onready var player: = %Player
 
-@export var health : int = 10
+@export var health : int = 10 #max_health
+@export var max_health : int = 10
 @export var speed : int = 150
 @export var is_hostile : bool = false
 @export var move_points : Array[Vector2] = []
@@ -25,7 +26,9 @@ func _physics_process(delta: float) -> void:
 	movement(delta)
 	move_and_slide()
 
-
+func _process(_delta: float) -> void:
+	if health <= 0:
+		queue_free()
 
 
 func _on_detection_radius_body_entered(_body: Node2D) -> void:
@@ -45,8 +48,26 @@ func movement(_delta):
 	var target_direction = position.direction_to(target)
 	velocity = speed * target_direction
 
-	if position.distance_to(target)<10:
+	if position.distance_to(target) < 10:
 		move_point+=1
-		if move_point > move_points.size()-1:
+		if move_point > move_points.size() -1:
 			move_point = 0
 	
+	if position.distance_to(target) < 75:
+		speed = 100
+	else:
+		speed = 150
+	
+"""
+func change_health(_amount) -> void:
+	health += _amount
+	print("Slime Health: " + str(health))
+"""
+
+func attacked(_amount) -> void:
+	health += _amount
+	if velocity.x >= + 1:
+		position.x += -70
+	elif velocity.x <= -2:
+		position.x += 70
+	print("Slime Health: " + str(health))
