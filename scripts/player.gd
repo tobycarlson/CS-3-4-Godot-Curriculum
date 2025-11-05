@@ -62,11 +62,13 @@ var current_xp: float = 0.0
 var xp_to_next_level: float = 100.0
 
 
+
 # Signals for UI updates
 signal health_changed(new_health: float, max_health: float)
 signal xp_changed(current_xp: float, xp_needed: float)
 signal level_up(new_level: int)
 signal player_died
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
