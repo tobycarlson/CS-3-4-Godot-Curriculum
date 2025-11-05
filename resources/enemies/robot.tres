@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyResource" load_steps=3 format=3 uid="uid://muc7qlsijog1"]
+
+[ext_resource type="SpriteFrames" uid="uid://vb5a3rr6m1hr" path="res://resources/animations/red_slime_frames.tres" id="1_s8djk"]
+[ext_resource type="Script" uid="uid://bxtjti5hlu2op" path="res://scripts/resources/enemy_resource.gd" id="2_ki20a"]
+
+[resource]
+script = ExtResource("2_ki20a")
+enemy_id = "Robot"
+enemy_name = "robot"
+animated_frames = ExtResource("1_s8djk")
+sprite_scale = 3.0
+max_health = 100.0
+contact_damage = 15.0
+move_speed = 50.0
+detection_range = 800.0
+xp_value = 25
+spawn_weight = 8

@@ -120,7 +120,7 @@ func handle_sprite(direction: Vector2) -> void:
 		animated_sprite.play(prefix + "_side")
 		animated_sprite.flip_h = false
 
-# ========== CHARACTER METHODS ==========
+# =============================== CHARACTER METHODS ===============================
 
 ## Take damage from enemies or hazards
 ## Returns true if this damage killed the player

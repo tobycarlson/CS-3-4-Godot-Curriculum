@@ -153,7 +153,7 @@ func _fire_weapon(direction: Vector2) -> bool:
 		get_tree().root.add_child(projectile_instance)
 
 	# Reset cooldown
-	fire_cooldown = equipped_weapon.get_fire_cooldown()
+	fire_cooldown = equipped_weapon.get_fire_cooldown() # COMMENT THIS LINE AND SHOOT REALLY FAST
 	return true
 
 
