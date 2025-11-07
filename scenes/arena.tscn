@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cxvnak5nqpr8a"]
+[gd_scene load_steps=16 format=3 uid="uid://cxvnak5nqpr8a"]
 
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="1_game_world"]
 [ext_resource type="TileSet" uid="uid://wio17aw1fnr2" path="res://tilesets/dungeon.tres" id="2_tileset"]
 [ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="3_player"]
 [ext_resource type="PackedScene" uid="uid://bvlan3m8qpr0k" path="res://scenes/weapon_system.tscn" id="4_weapon"]
 [ext_resource type="PackedScene" uid="uid://c8wk4n6mqpr3m" path="res://scenes/ui/hud.tscn" id="5_hud"]
+[ext_resource type="Resource" uid="uid://c73jpq85ul2ig" path="res://resources/weapons/shotgun.tres" id="5_ixwup"]
 [ext_resource type="PackedScene" uid="uid://fjrkobe6iwdw" path="res://scenes/ui/level_up_ui.tscn" id="6_levelup"]
 [ext_resource type="Script" uid="uid://bxtjti5hlu2op" path="res://scripts/resources/enemy_resource.gd" id="7_ixwup"]
 [ext_resource type="Script" uid="uid://c0j86ysrsp8s8" path="res://scripts/wave_spawner.gd" id="7_spawner"]
@@ -23,9 +24,9 @@ tile_set = ExtResource("2_tileset")
 
 [node name="Player" parent="." instance=ExtResource("3_player")]
 unique_name_in_owner = true
-position = Vector2(461, 348)
 
 [node name="WeaponSystem" parent="Player" instance=ExtResource("4_weapon")]
+equipped_weapon = ExtResource("5_ixwup")
 
 [node name="WaveSpawner" type="Node2D" parent="."]
 script = ExtResource("7_spawner")

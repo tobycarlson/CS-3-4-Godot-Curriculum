@@ -15,5 +15,5 @@ icon = ExtResource("1_6cgaj")
 value = 50
 base_damage = 15.0
 fire_rate = 0.35
-accuracy_spread = 5.0
+accuracy_spread = 6.0
 weapon_sprite = ExtResource("1_6cgaj")

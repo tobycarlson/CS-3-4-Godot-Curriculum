@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ProjectileWeaponResource" load_steps=3 format=3 uid="uid://cs8dwo2tgorki"]
+
+[ext_resource type="Script" uid="uid://c6yex7bm6vt2g" path="res://scripts/resources/projectile_weapon_resource.gd" id="1_c0rnk"]
+[ext_resource type="Resource" uid="uid://ck66qu4nabvln" path="res://resources/projectiles/rifle_projectile.tres" id="1_fwyd3"]
+
+[resource]
+script = ExtResource("1_c0rnk")
+projectile_config = ExtResource("1_fwyd3")
+item_id = "Rifle"
+item_name = "rifle"
+base_damage = 20.0
+fire_rate = 0.2
+accuracy_spread = 2.0
+metadata/_custom_type_script = "uid://c6yex7bm6vt2g"
