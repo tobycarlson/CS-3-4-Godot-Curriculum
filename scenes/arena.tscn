@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="3_player"]
 [ext_resource type="PackedScene" uid="uid://bvlan3m8qpr0k" path="res://scenes/weapon_system.tscn" id="4_weapon"]
 [ext_resource type="PackedScene" uid="uid://c8wk4n6mqpr3m" path="res://scenes/ui/hud.tscn" id="5_hud"]
-[ext_resource type="Resource" uid="uid://c73jpq85ul2ig" path="res://resources/weapons/shotgun.tres" id="5_ixwup"]
+[ext_resource type="Resource" uid="uid://e2n61gm48e8d" path="res://resources/weapons/op_gun.tres" id="5_ixwup"]
 [ext_resource type="PackedScene" uid="uid://fjrkobe6iwdw" path="res://scenes/ui/level_up_ui.tscn" id="6_levelup"]
 [ext_resource type="Script" uid="uid://bxtjti5hlu2op" path="res://scripts/resources/enemy_resource.gd" id="7_ixwup"]
 [ext_resource type="Script" uid="uid://c0j86ysrsp8s8" path="res://scripts/wave_spawner.gd" id="7_spawner"]

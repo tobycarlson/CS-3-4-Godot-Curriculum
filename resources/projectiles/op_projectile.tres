@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ProjectileResource" load_steps=3 format=3 uid="uid://8aa6xaeb4d2e"]
+
+[ext_resource type="Script" uid="uid://dmxm5o1dwdxrs" path="res://scripts/resources/projectile_resource.gd" id="1_bkeix"]
+[ext_resource type="Texture2D" uid="uid://b40e7prjyl4hk" path="res://assets/Personal Art/blue orb.png" id="2_85qok"]
+
+[resource]
+script = ExtResource("1_bkeix")
+texture = ExtResource("2_85qok")
+scale = Vector2(0.06, 0.06)
+speed = 1000.0
+lifetime = 2.0
+damage = 1000.0
+piercing = true
+max_pierces = 1000
