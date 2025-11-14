@@ -1,19 +1,19 @@
 [gd_resource type="Resource" script_class="ProjectileWeaponResource" load_steps=4 format=3 uid="uid://e2n61gm48e8d"]
 
-[ext_resource type="Texture2D" uid="uid://cqatq7nlwor0e" path="res://assets/point_arrow.png" id="1_bieeo"]
-[ext_resource type="Resource" uid="uid://8aa6xaeb4d2e" path="res://resources/projectiles/op_projectile.tres" id="2_bieeo"]
-[ext_resource type="Script" uid="uid://c6yex7bm6vt2g" path="res://scripts/resources/projectile_weapon_resource.gd" id="3_4yqxn"]
+[ext_resource type="Texture2D" uid="uid://cqatq7nlwor0e" path="res://assets/point_arrow.png" id="1_bfnhe"]
+[ext_resource type="Resource" uid="uid://8aa6xaeb4d2e" path="res://resources/projectiles/op_projectile.tres" id="2_etr0d"]
+[ext_resource type="Script" uid="uid://c6yex7bm6vt2g" path="res://scripts/resources/projectile_weapon_resource.gd" id="3_ijlep"]
 
 [resource]
-script = ExtResource("3_4yqxn")
-projectile_config = ExtResource("2_bieeo")
+script = ExtResource("3_ijlep")
+projectile_config = ExtResource("2_etr0d")
 projectile_count = 100
 spread_angle = 360.0
 item_id = "basic_pistol"
 item_name = "Basic Pistol"
 description = "A simple firearm that shoots basic projectiles. Perfect for starting your survival journey."
-icon = ExtResource("1_bieeo")
+icon = ExtResource("1_bfnhe")
 value = 50
 base_damage = 1000.0
 fire_rate = 0.5
-weapon_sprite = ExtResource("1_bieeo")
+weapon_sprite = ExtResource("1_bfnhe")

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ProjectileResource" load_steps=3 format=3 uid="uid://bkm5nup0fd1pi"]
+
+[ext_resource type="Script" uid="uid://dmxm5o1dwdxrs" path="res://scripts/resources/projectile_resource.gd" id="1_owuee"]
+[ext_resource type="Texture2D" uid="uid://c48vvvu1sg4kw" path="res://assets/Personal Art/fireball.png" id="2_owuee"]
+
+[resource]
+script = ExtResource("1_owuee")
+texture = ExtResource("2_owuee")
+scale = Vector2(0.2, 0.2)
+speed = 750.0
+lifetime = 0.35
+damage = 0.25

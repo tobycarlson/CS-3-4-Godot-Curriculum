@@ -70,6 +70,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+
 	# Update fire cooldown timer
 	if fire_cooldown > 0:
 		fire_cooldown -= delta
@@ -164,9 +165,11 @@ func equip_weapon(weapon: ProjectileWeaponResource) -> bool:
 		return false
 
 	equipped_weapon = weapon
+	#print("New Weapon: " + str(equipped_weapon.item_name))
 	_update_weapon_visuals()
 	fire_cooldown = 0.0  # Reset cooldown when switching weapons
 	return true
+
 
 
 ## Update the visual representation of the weapon

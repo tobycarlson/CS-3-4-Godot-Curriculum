@@ -9,6 +9,4 @@ texture = ExtResource("2_qyqwf")
 scale = Vector2(0.06, 0.06)
 speed = 750.0
 lifetime = 2.0
-damage = 1000.0
 piercing = true
-max_pierces = 1000

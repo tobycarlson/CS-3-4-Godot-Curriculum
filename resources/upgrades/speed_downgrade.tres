@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatUpgradeResource" load_steps=2 format=3 uid="uid://coplrqu84mg4t"]
+
+[ext_resource type="Script" uid="uid://b27lwx066vj4h" path="res://scripts/resources/stat_upgrade_resource.gd" id="1_dcfh1"]
+
+[resource]
+script = ExtResource("1_dcfh1")
+upgrade_id = "speed_downgrade"
+upgrade_name = "Move Speed -15"
+description = "Decreases your movement speed."
+stat_type = 1
+amount = -15.0

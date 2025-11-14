@@ -100,7 +100,7 @@ func _on_player_xp_changed(current: float, needed: float) -> void:
 			label.text = xp_text
 
 
-func _on_player_level_up(new_level: int) -> void:
+func _on_player_level_up(_new_level: int) -> void:
 	_update_level_display()
 	_update_stats_display()
 

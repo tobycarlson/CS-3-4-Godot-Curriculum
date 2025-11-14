@@ -41,6 +41,19 @@ class_name Player
 ##
 ## ============================================================================
 
+#references weapon system for keyboard weapon swapping
+@onready var weapon_system: WeaponSystem = $WeaponSystem
+
+@onready var basic_pistol = load("res://resources/weapons/basic_pistol.tres")
+@onready var rifle = load("res://resources/weapons/rifle.tres")
+@onready var shotgun = load("res://resources/weapons/shotgun.tres")
+@onready var uzi = load("res://resources/weapons/uzi.tres")
+@onready var god_gun = load("res://resources/weapons/op_gun.tres")
+@onready var flame_thrower = load("res://resources/weapons/flame_thrower.tres")
+
+
+
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 # Movement - Controls how fast the player moves
@@ -68,6 +81,30 @@ signal health_changed(new_health: float, max_health: float)
 signal xp_changed(current_xp: float, xp_needed: float)
 signal level_up(new_level: int)
 signal player_died
+
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("input_1"):
+		weapon_system.equip_weapon(basic_pistol)
+
+	if Input.is_action_just_pressed("input_2"):
+		weapon_system.equip_weapon(rifle)
+
+	if Input.is_action_just_pressed("input_3"):
+		weapon_system.equip_weapon(shotgun)
+
+
+	if Input.is_action_just_pressed("input_4"):
+		weapon_system.equip_weapon(uzi)
+	
+	if Input.is_action_just_pressed("input_5"):
+		weapon_system.equip_weapon(flame_thrower)
+
+	
+	if Input.is_action_just_pressed("input_0"):
+		weapon_system.equip_weapon(god_gun)
+
+
 
 
 func _input(event: InputEvent) -> void:
@@ -221,4 +258,6 @@ func upgrade_health(amount: float) -> bool:
 ## Returns true on successful upgrade
 func upgrade_speed(amount: float) -> bool:
 	move_speed += amount
+
+	print("New speed: " + str(move_speed))
 	return true

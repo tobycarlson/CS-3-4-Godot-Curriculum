@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxvnak5nqpr8a"]
+[gd_scene load_steps=17 format=3 uid="uid://cxvnak5nqpr8a"]
 
 [ext_resource type="Script" uid="uid://bnk74kv0ariww" path="res://scripts/game_world.gd" id="1_game_world"]
 [ext_resource type="TileSet" uid="uid://wio17aw1fnr2" path="res://tilesets/dungeon.tres" id="2_tileset"]
 [ext_resource type="PackedScene" uid="uid://cqvpxnx2pwqhk" path="res://scenes/player.tscn" id="3_player"]
 [ext_resource type="PackedScene" uid="uid://bvlan3m8qpr0k" path="res://scenes/weapon_system.tscn" id="4_weapon"]
 [ext_resource type="PackedScene" uid="uid://c8wk4n6mqpr3m" path="res://scenes/ui/hud.tscn" id="5_hud"]
-[ext_resource type="Resource" uid="uid://e2n61gm48e8d" path="res://resources/weapons/op_gun.tres" id="5_ixwup"]
 [ext_resource type="PackedScene" uid="uid://fjrkobe6iwdw" path="res://scenes/ui/level_up_ui.tscn" id="6_levelup"]
 [ext_resource type="Script" uid="uid://bxtjti5hlu2op" path="res://scripts/resources/enemy_resource.gd" id="7_ixwup"]
 [ext_resource type="Script" uid="uid://c0j86ysrsp8s8" path="res://scripts/wave_spawner.gd" id="7_spawner"]
@@ -15,6 +14,8 @@
 [ext_resource type="Script" uid="uid://b27lwx066vj4h" path="res://scripts/resources/stat_upgrade_resource.gd" id="10_k1k1x"]
 [ext_resource type="Resource" uid="uid://muc7qlsijog1" path="res://resources/enemies/robot.tres" id="10_xsx6r"]
 [ext_resource type="Resource" uid="uid://cq8xm2v8pqb3h" path="res://resources/upgrades/health_upgrade.tres" id="11_ajq0i"]
+[ext_resource type="Resource" uid="uid://b7q7hhlcb38s8" path="res://resources/upgrades/speed_upgrade.tres" id="16_a43o1"]
+[ext_resource type="Resource" uid="uid://coplrqu84mg4t" path="res://resources/upgrades/speed_downgrade.tres" id="17_ow1aj"]
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_game_world")
@@ -26,7 +27,7 @@ tile_set = ExtResource("2_tileset")
 unique_name_in_owner = true
 
 [node name="WeaponSystem" parent="Player" instance=ExtResource("4_weapon")]
-equipped_weapon = ExtResource("5_ixwup")
+rotation = -0.0050859973
 
 [node name="WaveSpawner" type="Node2D" parent="."]
 script = ExtResource("7_spawner")
@@ -36,4 +37,4 @@ available_enemies = Array[ExtResource("7_ixwup")]([ExtResource("8_a43o1"), ExtRe
 [node name="HUD" parent="." instance=ExtResource("5_hud")]
 
 [node name="LevelUpUI" parent="." instance=ExtResource("6_levelup")]
-available_upgrades = Array[ExtResource("10_k1k1x")]([ExtResource("11_ajq0i"), ExtResource("11_ajq0i"), ExtResource("11_ajq0i"), ExtResource("11_ajq0i"), ExtResource("11_ajq0i"), ExtResource("11_ajq0i")])
+available_upgrades = Array[ExtResource("10_k1k1x")]([ExtResource("16_a43o1"), ExtResource("11_ajq0i"), ExtResource("17_ow1aj")])

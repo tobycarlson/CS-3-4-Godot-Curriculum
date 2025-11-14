@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ProjectileWeaponResource" load_steps=4 format=3 uid="uid://bdqfndyqr7678"]
+
+[ext_resource type="Texture2D" uid="uid://cqatq7nlwor0e" path="res://assets/point_arrow.png" id="1_ylmp0"]
+[ext_resource type="Resource" uid="uid://bkm5nup0fd1pi" path="res://resources/projectiles/fire_projectile.tres" id="2_ylmp0"]
+[ext_resource type="Script" uid="uid://c6yex7bm6vt2g" path="res://scripts/resources/projectile_weapon_resource.gd" id="3_e4h1t"]
+
+[resource]
+script = ExtResource("3_e4h1t")
+projectile_config = ExtResource("2_ylmp0")
+projectile_count = 10
+spread_angle = 35.0
+item_id = "flame_thrower"
+item_name = "Flamethrower"
+icon = ExtResource("1_ylmp0")
+value = 50
+base_damage = 0.5
+fire_rate = 0.001
+weapon_range = 0.01
+accuracy_spread = 6.0
+weapon_sprite = ExtResource("1_ylmp0")
